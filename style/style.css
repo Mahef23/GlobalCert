@@ -1,0 +1,103 @@
+*{
+    margin:0;
+}
+body{
+    background-color: #252842;
+}
+section{
+    width: 100vw;
+}
+header{
+    height: 10vh;
+    width: 100vw;
+    background-color: rgb(165, 180, 248);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    margin: 0 5vh;
+}
+header nav a{
+    text-decoration: none;
+    color: beige;
+}
+header nav a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+header nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+}
+
+header nav a:hover::after {
+    animation: underline-expand 1s ease-in-out forwards;
+}
+
+@keyframes underline-expand {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.presentation{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.664);
+    border-radius: 50px;
+    margin: 10vh 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 2px;
+    width: 50vw;
+    justify-self: center;
+}
+#profile-img{
+    box-sizing: border-box;
+    border: 10vh solid black;
+    height: 30vh;
+    width: 30vh;
+    border-radius: 50%;
+}
+#profile-img:hover{
+    border: 2vh solid black;
+    transition: border 2s;
+}
+.pandp{
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+.project:hover,.contact:hover{
+    filter: brightness(60%);
+}
+.projaka,.kiontakt{
+    width:40vw;
+    height: 30vh;
+    transition: height 2s;
+    background-color: #111320;
+    width:40vw;
+    height: 35vh;
+    border-radius: 50px;
+}
+.pandp a{
+    color:rgb(101, 135, 158);
+    font-size: 25px;
+    text-decoration: none;
+    text-align: center;
+    animation: opacity 2s ;
+}
